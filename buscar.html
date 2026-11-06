@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador e Historial - Taller de Joyería</title>
+  <link rel="stylesheet" href="styles-buscar.css">
+</head>
+<body>
+
+  <!-- Navegación entre vistas -->
+  <nav class="navbar">
+    <a href="index.html">Control de Reparaciones</a>
+    <a href="buscar.html" class="active">Historial y Buscador</a>
+  </nav>
+
+  <main class="container">
+    <h1>Historial y Buscador de Reparaciones</h1>
+
+    <!-- Panel de Filtros -->
+    <section class="panel-filtros" id="panel-filtros">
+      <h2>Filtrar Búsqueda</h2>
+      
+      <div class="grid-filtros">
+        <!-- Filtro por Texto (Cliente, Pieza o Teléfono) -->
+        <div class="campo-filtro">
+          <label for="filtro-nom">Buscar por Cliente </label>
+          <input type="text" id="filtro-nom" placeholder="Ej: Maria">
+        </div>
+
+        <div class="campo-filtro">
+          <label for="filtro-tel">Buscar por Telefono </label>
+          <input type="text" id="filtro-tel" placeholder="Ej: Maria">
+        </div>
+
+        <!-- Filtro por ID -->
+        <div class="campo-filtro">
+          <label for="filtro-id">ID de Reparación</label>
+          <input type="number" id="filtro-id" placeholder="Ej: 102">
+        </div>
+
+        <!-- Filtro por Estado -->
+        <div class="campo-filtro">
+          <label for="filtro-estado">Estado</label>
+          <select id="filtro-estado">
+            <option value="todos">Todos los estados</option>
+            <option value="pendiente">Solo Pendientes</option>
+            <option value="entregado">Solo Entregadas</option>
+          </select>
+        </div>
+
+        <!-- Filtro por Fecha de Entrada -->
+        <div class="campo-filtro">
+          <label for="filtro-fecha">Fecha de Entrada</label>
+          <input type="date" id="filtro-fecha">
+        </div>
+      </div>
+
+      <!-- Botón para limpiar filtros rápidamente -->
+      <div class="acciones-filtros">
+        <button type="button" id="btn-limpiar-filtros">Limpiar Filtros</button>
+      </div>
+    </section>
+
+    <!-- Tabla de Resultados -->
+    <section class="panel-tabla">
+      <h2>Resultados de la Búsqueda</h2>
+      <table id="tabla-busqueda">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Teléfono</th>
+            <th>Pieza</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Entrada</th>
+            <th>Fecha salida</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-busqueda">
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="buscar.js"></script>
+</body>
+</html>

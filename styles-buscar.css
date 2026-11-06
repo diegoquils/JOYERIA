@@ -1,0 +1,138 @@
+/* Reseteo básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 20px;
+}
+
+nav{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+nav a{
+  border: 8px solid;
+  border-color: rgb(11, 11, 11);
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color:white
+}
+
+.navbar a:hover {
+  background-color: #22599c;
+}
+/* 2. Contenedor principal */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* 3. Panel de Filtros */
+.panel-filtros {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.panel-filtros h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.grid-filtros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.campo-filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo-filtro label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+}
+
+.campo-filtro input,
+.campo-filtro select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.acciones-filtros {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btn-limpiar-filtros {
+  padding: 8px 16px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn-limpiar-filtros:hover {
+  background-color: #5a6268;
+}
+
+/* 4. Tabla de Resultados */
+.panel-tabla {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.panel-tabla h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #555;
+  font-size: 14px;
+}
+
+td {
+  font-size: 14px;
+}

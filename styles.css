@@ -37,6 +37,23 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+nav{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+nav a{
+  border: 8px solid;
+  border-color: white;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+
 .logo-area {
   display: flex;
   align-items: center;
